@@ -1,0 +1,17 @@
+@use "../../styles/vars";
+
+.result {
+  background-color: vars.$distinctColor;
+  color: vars.$principalColor;
+  text-align: center;
+  padding: 1.5rem;
+
+  &__amount {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__currency {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}

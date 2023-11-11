@@ -1,0 +1,17 @@
+@use "../../styles/vars";
+
+.header {
+  background-color: vars.$principalColor;
+  color: vars.$distinctColor;
+  text-align: center;
+  padding: 1.5rem;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__base-amount {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+}

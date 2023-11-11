@@ -1,0 +1,29 @@
+@use "../../styles/vars";
+
+.currencies {
+  background-color: vars.$distinctColor;
+  font-size: 1.4rem;
+  color: vars.$principalColor;
+  padding: 1.5rem;
+  text-align: justify;
+
+  &__title {
+    font-weight: bold;
+    padding: 0.8rem;
+  }
+  &__list {
+    overflow-y: scroll;
+    max-height: 250px;
+    &__item {
+      border-top: 1px solid vars.$principalColor;
+      padding: 0.8rem;
+      transition: background-color 0.9s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: vars.$alternativeColor;
+        transition: background-color 0.2s;
+      }
+    }
+  }
+}

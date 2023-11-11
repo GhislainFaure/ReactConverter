@@ -1,8 +1,9 @@
-@use 'reset';
-@use 'vars';
+@use "reset";
+@use "vars";
 
 body {
-  font-family: sans-serif;
+  font-family: "League Spartan", sans-serif;
+  background: vars.$alternativeColor;
 }
 
 /* 

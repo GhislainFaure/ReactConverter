@@ -4,11 +4,12 @@
   background-color: vars.$distinctColor;
   color: vars.$principalColor;
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem;
 
   &__amount {
     font-size: 2rem;
     font-weight: bold;
+    font-weight: 700;
   }
   &__currency {
     font-size: 1.2rem;

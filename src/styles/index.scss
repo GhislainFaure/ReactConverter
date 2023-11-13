@@ -5,6 +5,17 @@ body {
   font-family: "League Spartan", sans-serif;
   background: vars.$alternativeColor;
 }
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
 
 /* 
   // or you can import your own font

@@ -1,11 +1,11 @@
 import "./style.scss";
 
 // == Composant
-function Result() {
+function Result({ value, selectedCurrency }) {
   return (
     <div className="result">
-      <p className="result__amount">1.09</p>
-      <p className="result__currency">United States Dollar</p>
+      <p className="result__amount">{Math.floor(value * 100) / 100}</p>
+      <p className="result__currency">{selectedCurrency}</p>
     </div>
   );
 }

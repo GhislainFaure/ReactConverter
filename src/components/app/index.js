@@ -23,6 +23,16 @@ class App extends React.Component {
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
 
+  componentDidMount() {
+    console.log(`l'aplication vient d'etre rendue `);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.selectedCurrency !== this.state.selectedCurrency) {
+      document.title = `conversion d'euros en ${this.state.selectedCurrency}`;
+    }
+  }
+
   handleButtonclick() {
     this.setState({
       isListOpen: !this.state.isListOpen,

@@ -6,6 +6,11 @@ function Currencies({ currencies, onCurrencyClick }) {
   return (
     <div className="currencies">
       <h2 className="currencies__title">Currencies</h2>
+      <input
+        type="text"
+        className="currencies__input"
+        placeholder="Chercher une devise"
+      />
       <ul className="currencies__list">
         {currencies.map((currency) => (
           <li

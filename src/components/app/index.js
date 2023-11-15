@@ -44,7 +44,8 @@ class App extends React.Component {
     );
     // on récupere le taux de change correspondant a la devise selectionnée via la propriéte rate
 
-    const convertedAmount = foundCurrency.rate * this.state.baseAmount;
+    const convertedAmount =
+      Math.floor(foundCurrency.rate * this.state.baseAmount * 100) / 100;
 
     return convertedAmount;
   }

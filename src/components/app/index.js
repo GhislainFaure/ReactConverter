@@ -17,14 +17,12 @@ class App extends React.Component {
       isListOpen: true,
       baseAmount: 1,
       selectedCurrency: "United States Dollar",
+      searchText: "",
     };
     this.handleButtonclick = this.handleButtonclick.bind(this);
     this.handleCurrencyClick = this.handleCurrencyClick.bind(this);
     this.handleChangeInput = this.handleChangeInput.bind(this);
-  }
-
-  componentDidMount() {
-    console.log(`l'aplication vient d'etre rendue `);
+    this.handleInputSearch = this.handleInputSearch.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -63,6 +61,11 @@ class App extends React.Component {
       baseAmount: event.target.valueAsNumber,
     });
   }
+  handleInputSearch(event) {
+    this.setState({
+      searchText: event.target.value,
+    });
+  }
 
   render() {
     return (
@@ -79,6 +82,8 @@ class App extends React.Component {
           <Currencies
             currencies={currenciesList}
             onCurrencyClick={this.handleCurrencyClick}
+            onCurrencyInput={this.handleInputSearch}
+            currencyInputValue={this.state.searchText}
           />
         )}
         <Result

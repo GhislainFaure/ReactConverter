@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "./style.scss";
 
 // == Composant
-function Header({ baseAmount }) {
+function Header({ baseAmount, onChangeInput }) {
   return (
     <header className="header">
       <h1 className="header__title">Converter</h1>
@@ -10,6 +10,7 @@ function Header({ baseAmount }) {
         type="number"
         className="header__input"
         placeholder="Montant en euro"
+        onChange={onChangeInput}
         value={baseAmount}
       />
     </header>
@@ -18,6 +19,7 @@ function Header({ baseAmount }) {
 
 Header.propTypes = {
   baseAmount: PropTypes.number.isRequired,
+  onChangeInput: PropTypes.func.isRequired,
 };
 
 // == Export

@@ -20,6 +20,7 @@ class App extends React.Component {
     };
     this.handleButtonclick = this.handleButtonclick.bind(this);
     this.handleCurrencyClick = this.handleCurrencyClick.bind(this);
+    this.handleChangeInput = this.handleChangeInput.bind(this);
   }
 
   handleButtonclick() {
@@ -47,10 +48,19 @@ class App extends React.Component {
     });
   }
 
+  handleChangeInput(event) {
+    this.setState({
+      baseAmount: event.target.valueAsNumber,
+    });
+  }
+
   render() {
     return (
       <div className="app">
-        <Header baseAmount={this.state.baseAmount} />
+        <Header
+          baseAmount={this.state.baseAmount}
+          onChangeInput={this.handleChangeInput}
+        />
         <Toggler
           onButtonClick={this.handleButtonclick}
           isOpen={this.state.isListOpen}

@@ -2,13 +2,17 @@ import PropTypes from "prop-types";
 import "./style.scss";
 
 // == Composant
-function Currencies({ currencies }) {
+function Currencies({ currencies, onCurrencyClick }) {
   return (
     <div className="currencies">
       <h2 className="currencies__title">Currencies</h2>
       <ul className="currencies__list">
         {currencies.map((currency) => (
-          <li key={currency.name} className="currencies__list__item">
+          <li
+            key={currency.name}
+            className="currencies__list__item"
+            onClick={() => onCurrencyClick(currency.name)}
+          >
             {currency.name}
           </li>
         ))}

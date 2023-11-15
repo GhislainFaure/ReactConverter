@@ -10,8 +10,12 @@
     font-size: 2rem;
     font-weight: bold;
   }
-  &__base-amount {
-    margin-top: 1rem;
+
+  &__input {
+    background-color: vars.$distinctColor;
+    border: 4px solid vars.$alternativeColor;
+    padding: 0.5rem;
     font-size: 1.2rem;
+    margin-top: 1rem;
   }
 }

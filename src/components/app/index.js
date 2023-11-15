@@ -19,6 +19,7 @@ class App extends React.Component {
       selectedCurrency: "United States Dollar",
     };
     this.handleButtonclick = this.handleButtonclick.bind(this);
+    this.handleCurrencyClick = this.handleCurrencyClick.bind(this);
   }
 
   handleButtonclick() {
@@ -39,6 +40,13 @@ class App extends React.Component {
     return convertedAmount;
   }
 
+  handleCurrencyClick(newCurrency) {
+    const currencyClicked = newCurrency;
+    this.setState({
+      selectedCurrency: currencyClicked,
+    });
+  }
+
   render() {
     return (
       <div className="app">
@@ -47,7 +55,12 @@ class App extends React.Component {
           onButtonClick={this.handleButtonclick}
           isOpen={this.state.isListOpen}
         />
-        {this.state.isListOpen && <Currencies currencies={currenciesList} />}
+        {this.state.isListOpen && (
+          <Currencies
+            currencies={currenciesList}
+            onCurrencyClick={this.handleCurrencyClick}
+          />
+        )}
         <Result
           value={this.makeConversion()}
           selectedCurrency={this.state.selectedCurrency}

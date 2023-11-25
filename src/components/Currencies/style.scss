@@ -2,39 +2,56 @@
 
 .currencies {
   background-color: vars.$distinctColor;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: vars.$principalColor;
   padding: 1.5rem;
   text-align: justify;
 
   &__title {
+    font-family: "Luckiest Guy", cursive;
     font-weight: bold;
-    padding: 0.8rem;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 0.8rem;
+    border-bottom: 1px solid vars.$principalColor;
+    text-align: center;
   }
   &__input {
     background-color: vars.$distinctColor;
     color: vars.$principalColor;
     border: none;
     padding: 0.8rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-top: 1rem;
     display: block;
     width: 100%;
+    &::placeholder {
+      color: vars.$principalColor;
+      opacity: 0.5;
+      font-style: oblique;
+      letter-spacing: 1px;
+      font-size: 1.4rem;
+    }
   }
   &__list {
     margin-top: 1.5rem;
     overflow-y: scroll;
     max-height: 250px;
+
     &__item {
       border-top: 1px solid vars.$principalColor;
       padding: 0.8rem;
-      transition: background-color 0.9s;
+      transition: background-color 0.3s;
       cursor: pointer;
 
       &:hover {
         background-color: vars.$alternativeColor;
-        transition: background-color 0.2s;
+        transition: background-color 0.05s;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: "Luckiest Guy", cursive;
       }
     }
   }

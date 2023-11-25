@@ -7,8 +7,9 @@
   padding: 2rem;
 
   &__title {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
+    font-family: "Luckiest Guy", cursive;
   }
 
   &__input {
@@ -16,7 +17,7 @@
     color: vars.$principalColor;
     border: 4px solid vars.$alternativeColor;
     padding: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-top: 1rem;
   }
 }

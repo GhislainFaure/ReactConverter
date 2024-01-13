@@ -13,11 +13,16 @@
   }
 
   &__input {
-    background-color: vars.$distinctColor;
+    background: url("../../assets/carb.png");
     color: vars.$principalColor;
     border: 4px solid vars.$alternativeColor;
     padding: 0.5rem;
     font-size: 1.6rem;
-    margin-top: 1rem;
+    margin-top: 0.6rem;
   }
+}
+h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }

@@ -6,6 +6,7 @@ function Header({ baseAmount, onChangeInput }) {
   return (
     <header className="header">
       <h1 className="header__title">Converter</h1>
+      <h3>Montant en euro(s)</h3>
       <input
         type="number"
         className="header__input"

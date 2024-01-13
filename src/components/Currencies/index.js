@@ -14,7 +14,7 @@ function Currencies({
       <input
         type="text"
         className="currencies__input"
-        placeholder="Chercher une devise"
+        placeholder=" Chercher une devise ... "
         value={currencyInputValue}
         onChange={onCurrencyInput}
       />

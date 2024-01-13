@@ -2,11 +2,10 @@
 @use "vars";
 
 body {
-  body {
-    background: vars.$alternativeColor;
-    font-family: "Bebas Neue", sans-serif;
-  }
+  // background: vars.$alternativeColor;
+  font-family: "Bebas Neue", sans-serif;
 }
+
 // #root {
 //   // display: flex;
 //   // justify-content: center;
@@ -17,7 +16,7 @@ html,
 body,
 #root {
   height: 100%;
-  background-color: black;
+  background: linear-gradient(180deg, #030203, #db6c82);
 }
 
 /* 
